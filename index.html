@@ -16,6 +16,278 @@
         rel="stylesheet">
 </head>
 <body>
+    <!-- difficulty specifier -->
+    <div class="difficultyBox">
+        <label for="Lite">Lite</label>
+        <input type="radio" name="difficultyBoxInput" checked value="Lite" id="Lite"  class="difficultyBox__input" />
+        <label for="Pro">Pro</label>
+        <input type="radio" name="difficultyBoxInput" id="Pro" value="Pro" class="difficultyBox__input" />
+    </div>
+    <!-- sounds part -->
+    <div class="sequencer">
+        <!-- kick sounds -->
+        <article class="kick-track">
+            <div class="controls">
+                <h1>Kick</h1>
+                <button data-track="0"><i class="fas fa-volume-mute"></i></button>
+                <select name="kick-select" id="kick-select">
+                    <option value="./Sounds/kick-808.wav">kick-808</option>
+                    <option value="./Sounds/kick-acoustic01.wav">kick-acoustic01</option>
+                    <option value="./Sounds/kick-acoustic02.wav">kick-acoustic02</option>
+                    <option value="./Sounds/kick-big.wav">kick-big</option>
+                    <option value="./Sounds/kick-classic.wav">kick-classic</option>
+                    <option value="./Sounds/kick-cultivator.wav">kick-cultivator</option>
+                    <option value="./Sounds/kick-deep.wav">kick-deep</option>
+                    <option value="./Sounds/kick-dry.wav">kick-dry</option>
+                    <option value="./Sounds/kick-electro01.wav">kick-electro01</option>
+                    <option value="./Sounds/kick-electro02.wav">kick-electro02</option>
+                    <option value="./Sounds/kick-floppy.wav">kick-floppy</option>
+                    <option value="./Sounds/kick-gritty.wav">kick-gritty</option>
+                    <option value="./Sounds/kick-heavy.wav">kick-heavy</option>
+                    <option value="./Sounds/kick-newwave.wav">kick-newwave</option>
+                    <option value="./Sounds/kick-oldschool.wav">kick-oldschool</option>
+                    <option value="./Sounds/kick-plain.wav">kick-plain</option>
+                    <option value="./Sounds/kick-slapback.wav">kick-slapback</option>
+                    <option value="./Sounds/kick-softy.wav">kick-softy</option>
+                    <option value="./Sounds/kick-stomp.wav">kick-stomp</option>
+                    <option value="./Sounds/kick-tape.wav">kick-tape</option>
+                    <option value="./Sounds/kick-thump.wav">kick-thump</option>
+                    <option value="./Sounds/kick-tight.wav">kick-tight</option>
+                    <option value="./Sounds/kick-tron.wav">kick-tron</option>
+                    <option value="./Sounds/kick-vinyl01.wav">kick-vinyl01</option>
+                    <option value="./Sounds/kick-vinyl02.wav">kick-vinyl02</option>
+                    <option value="./Sounds/kick-zapper.wav">kick-zapper</option>
+                </select>
+            </div>
+            <div  class="pad kick-pad b1"></div>
+            <div class="pad kick-pad b2"></div>
+            <div class="pad kick-pad b3"></div>
+            <div class="pad kick-pad b4"></div>
+            <div class="pad kick-pad b5"></div>
+            <div class="pad kick-pad b6"></div>
+            <div class="pad kick-pad b7"></div>
+            <div class="pad kick-pad b8"></div>
+            <div class="pad kick-pad b9"></div>
+            <div class="pad kick-pad b10"></div>
+        </article>
+        <!-- snare sounds -->
+        <article class="snare-track">
+            <div class="controls">
+                <h1>Kick</h1>
+                <button data-track="0"><i class="fas fa-volume-mute"></i></button>
+                <select name="sanre-select" id="snare-select">
+                    <option value="./Sounds/snare-808.wav">snare-808</option>
+                    <option value="./Sounds/snare-acoustic01.wav">snare-acoustic01</option>
+                    <option value="./Sounds/snare-acoustic02.wav">snare-acoustic02</option>
+                    <option value="./Sounds/snare-analog.wav">snare-analog</option>
+                    <option value="./Sounds/snare-big.wav">snare-big</option>
+                    <option value="./Sounds/snare-block.wav">snare-block</option>
+                    <option value="./Sounds/snare-brute.wav">snare-brute</option>
+                    <option value="./Sounds/snare-dist01.wav">snare-dist01</option>
+                    <option value="./Sounds/snare-dist02.wav">snare-dist02</option>
+                    <option value="./Sounds/snare-dist03.wav">snare-dist03</option>
+                    <option value="./Sounds/snare-electro.wav">snare-electro</option>
+                    <option value="./Sounds/snare-lofi01.wav">snare-lofi01</option>
+                    <option value="./Sounds/snare-lofi02.wav">snare-lofi02</option>
+                    <option value="./Sounds/snare-modular.wav">snare-modular</option>
+                    <option value="./Sounds/snare-noise.wav">snare-noise</option>
+                    <option value="./Sounds/snare-pinch.wav">snare-pinch</option>
+                    <option value="./Sounds/snare-punch.wav">snare-punch</option>
+                    <option value="./Sounds/snare-smasher.wav">snare-smasher</option>
+                    <option value="./Sounds/snare-sumo.wav">snare-sumo</option>
+                    <option value="./Sounds/snare-tape.wav">snare-tape</option>
+                    <option value="./Sounds/snare-vinyl01.wav">snare-vinyl01</option>
+                    <option value="./Sounds/snare-vinyl02.wav">snare-vinyl02</option>
+                </select>
+            </div>
+            <div class="pad snare-pad b1"></div>
+            <div class="pad snare-pad b2"></div>
+            <div class="pad snare-pad b3"></div>
+            <div class="pad snare-pad b4"></div>
+            <div class="pad snare-pad b5"></div>
+            <div class="pad snare-pad b6"></div>
+            <div class="pad snare-pad b9"></div>
+            <div class="pad snare-pad b10"></div>
+        </article>
+        <!-- hihat sounds -->
+        <article class="hihat-track">
+            <div class="controls">
+                <h1>hihat</h1>
+                <button data-track="0"><i class="fas fa-volume-mute"></i></button>
+                <select name="hihat-select" id="hihat-select">
+                    <option value="./Sounds/hihat-808.wav">hihat-808</option>
+                    <option value="./Sounds/hihat-acoustic01.wav">hihat-acoustic01</option>
+                    <option value="./Sounds/hihat-acoustic02.wav">hihat-acoustic02</option>
+                    <option value="./Sounds/hihat-analog.wav">hihat-analog</option>
+                    <option value="./Sounds/hihat-digital.wav">hihat-digital</option>
+                    <option value="./Sounds/hihat-dist01.wav">hihat-dist01</option>
+                    <option value="./Sounds/hihat-dist02.wav">hihat-dist02</option>
+                    <option value="./Sounds/hihat-electro.wav">hihat-electro</option>
+                    <option value="./Sounds/hihat-plain.wav">hihat-plain</option>
+                    <option value="./Sounds/hihat-reso.wav">hihat-reso</option>
+                    <option value="./Sounds/hihat-ring.wav">hihat-ring</option>
+                </select>
+            </div>
+            <div class="pad hihat-pad b1"></div>
+            <div class="pad hihat-pad b2"></div>
+            <div class="pad hihat-pad b3"></div>
+            <div class="pad hihat-pad b4"></div>
+            <div class="pad hihat-pad b5"></div>
+            <div class="pad hihat-pad b6"></div>
+            <div class="pad hihat-pad b9"></div>
+            <div class="pad hihat-pad b10"></div>
+        </article>
+        <!-- openhat sounds -->
+        <article class="openhat-track">
+            <div class="controls">
+                <h1>openhat</h1>
+                <button data-track="0"><i class="fas fa-volume-mute"></i></button>
+                <select name="openhat-select" id="openhat-select">
+                    <option value="./Sounds/openhat-808.wav">openhat-808</option>
+                    <option value="./Sounds/openhat-acoustic01.wav">openhat-acoustic01</option>
+                    <option value="./Sounds/openhat-analog.wav">openhat-analog</option>
+                    <option value="./Sounds/openhat-slick.wav">openhat-slick</option>
+                    <option value="./Sounds/openhat-tight.wav">openhat-tight</option>
+                </select>
+            </div>
+            <div class="pad openhat-pad b1"></div>
+            <div class="pad openhat-pad b2"></div>
+            <div class="pad openhat-pad b3"></div>
+            <div class="pad openhat-pad b4"></div>
+            <div class="pad openhat-pad b5"></div>
+            <div class="pad openhat-pad b6"></div>
+            <div class="pad openhat-pad b9"></div>
+            <div class="pad openhat-pad b10"></div>
+        </article>
+        <!-- crash sounds -->
+        <article class="crash-track">
+            <div class="controls">
+                <h1>crash</h1>
+                <button data-track="0"><i class="fas fa-volume-mute"></i></button>
+                <select name="crash-select" id="crash-select">
+                    <option value="./Sounds/crash-808.wav">crash-808</option>
+                    <option value="./Sounds/crash-acoustic.wav">crash-acoustic</option>
+                    <option value="./Sounds/crash-noise.wav">crash-noise</option>
+                    <option value="./Sounds/crash-tape.wav">crash-tape</option>
+                </select>
+            </div>
+            <div class="pad crash-pad b1"></div>
+            <div class="pad crash-pad b2"></div>
+            <div class="pad crash-pad b3"></div>
+            <div class="pad crash-pad b4"></div>
+            <div class="pad crash-pad b5"></div>
+            <div class="pad crash-pad b6"></div>
+            <div class="pad crash-pad b9"></div>
+            <div class="pad crash-pad b10"></div>
+        </article>
+        <!-- tom sounds -->
+        <article class="tom-track">
+            <div class="controls">
+                <h1>tom</h1>
+                <button data-track="0"><i class="fas fa-volume-mute"></i></button>
+                <select name="tom-select" id="tom-select">
+                    <option value="./Sounds/tom-808.wav">tom-808</option>
+                    <option value="./Sounds/tom-acoustic01.wav">tom-acoustic01</option>
+                    <option value="./Sounds/tom-acoustic02.wav">tom-acoustic02</option>
+                    <option value="./Sounds/tom-analog.wav">tom-analog</option>
+                    <option value="./Sounds/tom-chiptune.wav">tom-chiptune</option>
+                    <option value="./Sounds/tom-fm.wav">tom-fm</option>
+                    <option value="./Sounds/tom-lofi.wav">tom-lofi</option>
+                    <option value="./Sounds/tom-rototom.wav">tom-rototom</option>
+                    <option value="./Sounds/tom-short.wav">tom-short</option>
+                </select>
+            </div>
+            <div class="pad tom-pad b1"></div>
+            <div class="pad tom-pad b2"></div>
+            <div class="pad tom-pad b3"></div>
+            <div class="pad tom-pad b4"></div>
+            <div class="pad tom-pad b5"></div>
+            <div class="pad tom-pad b6"></div>
+            <div class="pad tom-pad b9"></div>
+            <div class="pad tom-pad b10"></div>
+        </article>
+        <!-- perc sounds -->
+        <article class="perc-track">
+            <div class="controls">
+                <h1>perc</h1>
+                <button data-track="0"><i class="fas fa-volume-mute"></i></button>
+                <select name="perc-select" id="perc-select">
+                    <option value="./Sounds/perc-808.wav">perc-808</option>
+                    <option value="./Sounds/perc-chirpy.wav">perc-chirpy</option>
+                    <option value="./Sounds/perc-hollow.wav">perc-hollow</option>
+                    <option value="./Sounds/perc-laser.wav">perc-laser</option>
+                    <option value="./Sounds/perc-metal.wav">perc-metal</option>
+                    <option value="./Sounds/perc-nasty.wav">perc-nasty</option>
+                    <option value="./Sounds/perc-short.wav">perc-short</option>
+                    <option value="./Sounds/perc-tambo.wav">perc-tambo</option>
+                    <option value="./Sounds/perc-tribal.wav">perc-tribal</option>
+                    <option value="./Sounds/perc-weirdo.wav">perc-weirdo</option>
+
+                </select>
+            </div>
+            <div class="pad perc-pad b1"></div>
+            <div class="pad perc-pad b2"></div>
+            <div class="pad perc-pad b3"></div>
+            <div class="pad perc-pad b4"></div>
+            <div class="pad perc-pad b5"></div>
+            <div class="pad perc-pad b6"></div>
+            <div class="pad perc-pad b9"></div>
+            <div class="pad perc-pad b10"></div>
+        </article>
+        <!-- ride -->
+        <article class="ride-track">
+            <div class="controls">
+                <h1>ride</h1>
+                <button data-track="0"><i class="fas fa-volume-mute"></i></button>
+                <select name="ride-select" id="ride-select">
+                    <option value="./Sounds/ride-acoustic01.wav">ride-acoustic01</option>
+                    <option value="./Sounds/ride-acoustic02.wav">ride-acoustic02</option>
+
+                </select>
+            </div>
+            <div class="pad ride-pad b1"></div>
+            <div class="pad ride-pad b2"></div>
+            <div class="pad ride-pad b3"></div>
+            <div class="pad ride-pad b4"></div>
+            <div class="pad ride-pad b5"></div>
+            <div class="pad ride-pad b6"></div>
+            <div class="pad ride-pad b9"></div>
+            <div class="pad ride-pad b10"></div>
+        </article>
+        <!-- shaker -->
+        <article class="shaker-track">
+            <div class="controls">
+                <h1>shaker</h1>
+                <button data-track="0"><i class="fas fa-volume-mute"></i></button>
+                <select name="shaker-select" id="shaker-select">
+                    <option value="./Sounds/shaker-analog.wav">shaker-analog</option>
+                    <option value="./Sounds/shaker-shuffle.wav">shaker-shuffle</option>
+                    <option value="./Sounds/shaker-suckup.wav">shaker-suckup</option>
+                </select>
+            </div>
+            <div class="pad shaker-pad b1"></div>
+            <div class="pad shaker-pad b2"></div>
+            <div class="pad shaker-pad b3"></div>
+            <div class="pad shaker-pad b4"></div>
+            <div class="pad shaker-pad b5"></div>
+            <div class="pad shaker-pad b6"></div>
+            <div class="pad shaker-pad b9"></div>
+            <div class="pad shaker-pad b10"></div>
+        </article>
+
+        <!-- play button -->
+        <div class="start-div">
+            <button class="start-div__btn">
+                play
+            </button>
+        </div>
+        <!--range input -->
+        <div class="speed-range">
+            <input min="20" max="300" type="range" class="speed-range__input">
+            <p class="spped-tange__amount">Tempo : <span id="beatSpeed"></span></p>
+        </div>
+        <!--  -->
+    </div>
     <script src="app.js"></script>
 </body>
 </html>
