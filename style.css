@@ -5,6 +5,394 @@
 
 }
 
+
 html {
     font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+/* difficulty selector */
+
+.difficultyBox{
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 1rem;
+}
+.difficultyBox__label{
+    font-family: 'Roboto Slab';
+    display: block;
+    font-weight: 900;
+    font-size: 1.2rem;
+    padding: 0 1rem;
+    cursor: pointer;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;    
+}
+
+
+.difficultyBox__input{
+    opacity: 0;
+    cursor: pointer;
+}
+.checkmark{
+    position: absolute;
+    top: -2px;
+    left: 40px;
+    height: 2rem;
+    width: 2rem;
+    background-color: #eee;
+    border-radius: 50%;
+}
+.difficultyBox__label:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+.difficultyBox__label input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+/* Show the indicator (dot/circle) when checked */
+.difficultyBox__label input:checked ~ .checkmark:after {
+    display: block;
+}
+.difficultyBox__label .checkmark:after {
+   top: 6px;
+   left: 6px;
+   width: 8px;
+   height: 8px;
+   border-radius: 50%;
+   background: white;
+}
+
+
+/* sequencer */
+
+.sequencer{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+.sequencer .controls{
+    display: grid;
+    grid-template-columns: 1fr .5fr 1fr;
+    grid-gap: 1rem;
+    padding: 1rem 1.5rem;
+
+}
+
+.controls h1{
+    font-family: "Roboto Slab";
+    font-weight: 500;
+
+}
+ 
+.controls select{
+    width: 100%;
+    border: none;
+    width: 100%;
+    background-color: #efefef;
+    position: relative;
+    outline: none;
+    border-radius: 8px;
+    padding: 0 .3rem;
+}
+/* .controls:nth-child(last-child)::after{
+    content: "\25BC";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+    counter-reset: none;
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+} */
+
+.controls button{
+    background-color: none;
+    border: none;
+    border-radius: 5px;
+    width: 50%;
+    height: 100%;
+}
+.sequencer .padControls{
+    display: flex;
+    justify-content: center;
+    /* padding: 0 1.5rem; */
+}
+.pad{
+    width: 2rem;
+    height: 1.8rem;
+    background-color: #000;
+    margin: 0 .4rem;
+}
+.kick-pad{
+    background-color: #CCE8E6;
+}
+.snare-pad{
+    background-color: #A8BDC5;
+}
+.hihat-pad{
+    background-color: #ffbf80;
+}
+.openhat-pad{
+    background-color:#c3c388;
+}
+.crash-pad{
+    background-color: #66ffff;
+}
+.tom-pad{
+    background-color:#ff4d94 ;
+}
+.perc-pad{
+    background-color: #ffff80;
+}
+.ride-pad{
+    background-color: #a3a3c2;
+}
+.shaker-pad{
+    background-color:#66ff99 ;
+}
+
+
+
+.start-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+}
+.start-div__btn{
+    border-radius: 5px;
+    border:none;
+    padding: .5rem 1rem;
+    width: 20%;
+    background-color: rgb(208, 208, 208);
+}
+
+.speed-range{
+    font-family: "Roboto Slab";
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.speed-range__input{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color:rgb(208,208,208) ;
+    border-radius: 10px;
+    width: 50%;
+    margin: 1rem;
+}
+
+
+
+
+
+
+
+@media screen and (min-width:768px) {
+    .difficultyBox{
+        background:#1b3a48 ;
+        clip-path: polygon(0 0, 100% 0, 80% 60%, 20% 60%);
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 3rem 1rem;
+        width: 50rem;
+        height: 15rem;
+        margin: auto;
+    }
+    .difficultyBox__label{
+        font-family: 'Roboto Slab';
+        color: white;
+        display: block;
+        font-weight: 900;
+        font-size: 2rem;
+        padding: 0 2rem;
+        cursor: pointer;
+        position: relative;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;    
+    }
+    
+    
+    .difficultyBox__input{
+        opacity: 0;
+        cursor: pointer;
+    }
+    .checkmark{
+        position: absolute;
+        top: 5px;
+        left: 65px;
+        height: 2rem;
+        width: 2rem;
+        background-color: #eee;
+        border-radius: 50%;
+    }
+    .difficultyBox__label:hover input ~ .checkmark {
+        background-color: #ccc;
+      }
+      
+    .difficultyBox__label input:checked ~ .checkmark {
+        background-color: #2196F3;
+    }
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+    /* Show the indicator (dot/circle) when checked */
+    .difficultyBox__label input:checked ~ .checkmark:after {
+        display: block;
+    }
+    .difficultyBox__label .checkmark:after {
+       top: 6px;
+       left: 6px;
+       width: 8px;
+       height: 8px;
+       border-radius: 50%;
+       background: white;
+    }
+    
+    
+    /* sequencer */
+    
+    .sequencer{
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+    }
+    .sequencer .controls{
+        display: grid;
+        grid-template-columns: 1fr .5fr 1fr;
+        grid-gap: 1rem;
+        padding: 1rem 1.5rem;
+    
+    }
+    
+    .controls h1{
+        font-family: "Roboto Slab";
+        font-weight: 500;
+    
+    }
+     
+    .controls select{
+        width: 100%;
+        border: none;
+        width: 100%;
+        background-color: #efefef;
+        position: relative;
+        outline: none;
+        border-radius: 8px;
+        padding: 0 .3rem;
+    }
+    /* .controls:nth-child(last-child)::after{
+        content: "\25BC";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        background-color: #000;
+        counter-reset: none;
+        clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+    } */
+    
+    .controls button{
+        background-color: none;
+        border: none;
+        border-radius: 5px;
+        width: 50%;
+        height: 100%;
+    }
+    .sequencer .padControls{
+        display: flex;
+        justify-content: center;
+        /* padding: 0 1.5rem; */
+    }
+    .pad{
+        width: 2rem;
+        height: 1.8rem;
+        background-color: #000;
+        margin: 0 .4rem;
+    }
+    .kick-pad{
+        background-color: #CCE8E6;
+    }
+    .snare-pad{
+        background-color: #A8BDC5;
+    }
+    .hihat-pad{
+        background-color: #ffbf80;
+    }
+    .openhat-pad{
+        background-color:#c3c388;
+    }
+    .crash-pad{
+        background-color: #66ffff;
+    }
+    .tom-pad{
+        background-color:#ff4d94 ;
+    }
+    .perc-pad{
+        background-color: #ffff80;
+    }
+    .ride-pad{
+        background-color: #a3a3c2;
+    }
+    .shaker-pad{
+        background-color:#66ff99 ;
+    }
+    
+    
+    
+    .start-div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2rem 0;
+    }
+    .start-div__btn{
+        border-radius: 5px;
+        border:none;
+        padding: .5rem 1rem;
+        width: 20%;
+        background-color: rgb(208, 208, 208);
+    }
+    
+    .speed-range{
+        font-family: "Roboto Slab";
+        font-weight: 700;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .speed-range__input{
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-color:rgb(208,208,208) ;
+        border-radius: 10px;
+        width: 50%;
+        margin: 1rem;
+    }
 }

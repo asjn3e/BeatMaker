@@ -18,10 +18,14 @@
 <body>
     <!-- difficulty specifier -->
     <div class="difficultyBox">
-        <label for="Lite">Lite</label>
-        <input type="radio" name="difficultyBoxInput" checked value="Lite" id="Lite"  class="difficultyBox__input" />
-        <label for="Pro">Pro</label>
-        <input type="radio" name="difficultyBoxInput" id="Pro" value="Pro" class="difficultyBox__input" />
+        <label for="Lite" class="difficultyBox__label">Lite
+            <input type="radio" name="difficultyBoxInput" checked value="Lite" id="Lite"  class="difficultyBox__input" />
+            <span class="checkmark"></span>
+        </label>
+        <label for="Pro" class="difficultyBox__label">Pro
+            <input type="radio" name="difficultyBoxInput" id="Pro" value="Pro" class="difficultyBox__input" />
+            <span class="checkmark"></span>
+        </label>
     </div>
     <!-- sounds part -->
     <div class="sequencer">
@@ -59,21 +63,23 @@
                     <option value="./Sounds/kick-zapper.wav">kick-zapper</option>
                 </select>
             </div>
-            <div  class="pad kick-pad b1"></div>
-            <div class="pad kick-pad b2"></div>
-            <div class="pad kick-pad b3"></div>
-            <div class="pad kick-pad b4"></div>
-            <div class="pad kick-pad b5"></div>
-            <div class="pad kick-pad b6"></div>
-            <div class="pad kick-pad b7"></div>
-            <div class="pad kick-pad b8"></div>
-            <div class="pad kick-pad b9"></div>
-            <div class="pad kick-pad b10"></div>
+            <div class="padControls">
+                <div class="pad kick-pad b1"></div>
+                <div class="pad kick-pad b2"></div>
+                <div class="pad kick-pad b3"></div>
+                <div class="pad kick-pad b4"></div>
+                <div class="pad kick-pad b5"></div>
+                <div class="pad kick-pad b6"></div>
+                <div class="pad kick-pad b7"></div>
+                <div class="pad kick-pad b8"></div>
+                <div class="pad kick-pad b9"></div>
+                <div class="pad kick-pad b10"></div>
+            </div>
         </article>
         <!-- snare sounds -->
         <article class="snare-track">
             <div class="controls">
-                <h1>Kick</h1>
+                <h1>Snare</h1>
                 <button data-track="0"><i class="fas fa-volume-mute"></i></button>
                 <select name="sanre-select" id="snare-select">
                     <option value="./Sounds/snare-808.wav">snare-808</option>
@@ -100,19 +106,23 @@
                     <option value="./Sounds/snare-vinyl02.wav">snare-vinyl02</option>
                 </select>
             </div>
-            <div class="pad snare-pad b1"></div>
-            <div class="pad snare-pad b2"></div>
-            <div class="pad snare-pad b3"></div>
-            <div class="pad snare-pad b4"></div>
-            <div class="pad snare-pad b5"></div>
-            <div class="pad snare-pad b6"></div>
-            <div class="pad snare-pad b9"></div>
-            <div class="pad snare-pad b10"></div>
+            <div class="padControls">
+                <div class="pad snare-pad b1"></div>
+                <div class="pad snare-pad b2"></div>
+                <div class="pad snare-pad b3"></div>
+                <div class="pad snare-pad b4"></div>
+                <div class="pad snare-pad b5"></div>
+                <div class="pad snare-pad b6"></div>
+                <div class="pad snare-pad b7"></div>
+                <div class="pad snare-pad b8"></div>
+                <div class="pad snare-pad b9"></div>
+                <div class="pad snare-pad b10"></div>
+            </div>
         </article>
         <!-- hihat sounds -->
         <article class="hihat-track">
             <div class="controls">
-                <h1>hihat</h1>
+                <h1>Hihat</h1>
                 <button data-track="0"><i class="fas fa-volume-mute"></i></button>
                 <select name="hihat-select" id="hihat-select">
                     <option value="./Sounds/hihat-808.wav">hihat-808</option>
@@ -128,19 +138,23 @@
                     <option value="./Sounds/hihat-ring.wav">hihat-ring</option>
                 </select>
             </div>
-            <div class="pad hihat-pad b1"></div>
-            <div class="pad hihat-pad b2"></div>
-            <div class="pad hihat-pad b3"></div>
-            <div class="pad hihat-pad b4"></div>
-            <div class="pad hihat-pad b5"></div>
-            <div class="pad hihat-pad b6"></div>
-            <div class="pad hihat-pad b9"></div>
-            <div class="pad hihat-pad b10"></div>
+            <div class="padControls">
+                <div class="pad hihat-pad b1"></div>
+                <div class="pad hihat-pad b2"></div>
+                <div class="pad hihat-pad b3"></div>
+                <div class="pad hihat-pad b4"></div>
+                <div class="pad hihat-pad b5"></div>
+                <div class="pad hihat-pad b6"></div>
+                <div class="pad hihat-pad b7"></div>
+                <div class="pad hihat-pad b8"></div>
+                <div class="pad hihat-pad b9"></div>
+                <div class="pad hihat-pad b10"></div>
+            </div>
         </article>
         <!-- openhat sounds -->
         <article class="openhat-track">
             <div class="controls">
-                <h1>openhat</h1>
+                <h1>Openhat</h1>
                 <button data-track="0"><i class="fas fa-volume-mute"></i></button>
                 <select name="openhat-select" id="openhat-select">
                     <option value="./Sounds/openhat-808.wav">openhat-808</option>
@@ -150,19 +164,23 @@
                     <option value="./Sounds/openhat-tight.wav">openhat-tight</option>
                 </select>
             </div>
-            <div class="pad openhat-pad b1"></div>
-            <div class="pad openhat-pad b2"></div>
-            <div class="pad openhat-pad b3"></div>
-            <div class="pad openhat-pad b4"></div>
-            <div class="pad openhat-pad b5"></div>
-            <div class="pad openhat-pad b6"></div>
-            <div class="pad openhat-pad b9"></div>
-            <div class="pad openhat-pad b10"></div>
+            <div class="padControls">
+                <div class="pad openhat-pad b1"></div>
+                <div class="pad openhat-pad b2"></div>
+                <div class="pad openhat-pad b3"></div>
+                <div class="pad openhat-pad b4"></div>
+                <div class="pad openhat-pad b5"></div>
+                <div class="pad openhat-pad b6"></div>
+                <div class="pad openhat-pad b7"></div>
+                <div class="pad openhat-pad b8"></div>
+                <div class="pad openhat-pad b9"></div>
+                <div class="pad openhat-pad b10"></div>
+            </div>
         </article>
         <!-- crash sounds -->
         <article class="crash-track">
             <div class="controls">
-                <h1>crash</h1>
+                <h1>Crash</h1>
                 <button data-track="0"><i class="fas fa-volume-mute"></i></button>
                 <select name="crash-select" id="crash-select">
                     <option value="./Sounds/crash-808.wav">crash-808</option>
@@ -171,19 +189,23 @@
                     <option value="./Sounds/crash-tape.wav">crash-tape</option>
                 </select>
             </div>
-            <div class="pad crash-pad b1"></div>
-            <div class="pad crash-pad b2"></div>
-            <div class="pad crash-pad b3"></div>
-            <div class="pad crash-pad b4"></div>
-            <div class="pad crash-pad b5"></div>
-            <div class="pad crash-pad b6"></div>
-            <div class="pad crash-pad b9"></div>
-            <div class="pad crash-pad b10"></div>
+            <div class="padControls">
+                <div class="pad crash-pad b1"></div>
+                <div class="pad crash-pad b2"></div>
+                <div class="pad crash-pad b3"></div>
+                <div class="pad crash-pad b4"></div>
+                <div class="pad crash-pad b5"></div>
+                <div class="pad crash-pad b6"></div>
+                <div class="pad crash-pad b7"></div>
+                <div class="pad crash-pad b8"></div>
+                <div class="pad crash-pad b9"></div>
+                <div class="pad crash-pad b10"></div>
+            </div>
         </article>
         <!-- tom sounds -->
         <article class="tom-track">
             <div class="controls">
-                <h1>tom</h1>
+                <h1>Tom</h1>
                 <button data-track="0"><i class="fas fa-volume-mute"></i></button>
                 <select name="tom-select" id="tom-select">
                     <option value="./Sounds/tom-808.wav">tom-808</option>
@@ -197,19 +219,23 @@
                     <option value="./Sounds/tom-short.wav">tom-short</option>
                 </select>
             </div>
-            <div class="pad tom-pad b1"></div>
-            <div class="pad tom-pad b2"></div>
-            <div class="pad tom-pad b3"></div>
-            <div class="pad tom-pad b4"></div>
-            <div class="pad tom-pad b5"></div>
-            <div class="pad tom-pad b6"></div>
-            <div class="pad tom-pad b9"></div>
-            <div class="pad tom-pad b10"></div>
+            <div class="padControls">
+                <div class="pad tom-pad b1"></div>
+                <div class="pad tom-pad b2"></div>
+                <div class="pad tom-pad b3"></div>
+                <div class="pad tom-pad b4"></div>
+                <div class="pad tom-pad b5"></div>
+                <div class="pad tom-pad b6"></div>
+                <div class="pad tom-pad b9"></div>
+                <div class="pad tom-pad b7"></div>
+                <div class="pad tom-pad b8"></div>
+                <div class="pad tom-pad b10"></div>
+            </div>
         </article>
         <!-- perc sounds -->
         <article class="perc-track">
             <div class="controls">
-                <h1>perc</h1>
+                <h1>Perc</h1>
                 <button data-track="0"><i class="fas fa-volume-mute"></i></button>
                 <select name="perc-select" id="perc-select">
                     <option value="./Sounds/perc-808.wav">perc-808</option>
@@ -225,19 +251,23 @@
 
                 </select>
             </div>
-            <div class="pad perc-pad b1"></div>
-            <div class="pad perc-pad b2"></div>
-            <div class="pad perc-pad b3"></div>
-            <div class="pad perc-pad b4"></div>
-            <div class="pad perc-pad b5"></div>
-            <div class="pad perc-pad b6"></div>
-            <div class="pad perc-pad b9"></div>
-            <div class="pad perc-pad b10"></div>
+            <div class="padControls">
+                <div class="pad perc-pad b1"></div>
+                <div class="pad perc-pad b2"></div>
+                <div class="pad perc-pad b3"></div>
+                <div class="pad perc-pad b4"></div>
+                <div class="pad perc-pad b5"></div>
+                <div class="pad perc-pad b6"></div>
+                <div class="pad perc-pad b7"></div>
+                <div class="pad perc-pad b8"></div>
+                <div class="pad perc-pad b9"></div>
+                <div class="pad perc-pad b10"></div>
+            </div>
         </article>
         <!-- ride -->
         <article class="ride-track">
             <div class="controls">
-                <h1>ride</h1>
+                <h1>Ride</h1>
                 <button data-track="0"><i class="fas fa-volume-mute"></i></button>
                 <select name="ride-select" id="ride-select">
                     <option value="./Sounds/ride-acoustic01.wav">ride-acoustic01</option>
@@ -245,19 +275,23 @@
 
                 </select>
             </div>
-            <div class="pad ride-pad b1"></div>
-            <div class="pad ride-pad b2"></div>
-            <div class="pad ride-pad b3"></div>
-            <div class="pad ride-pad b4"></div>
-            <div class="pad ride-pad b5"></div>
-            <div class="pad ride-pad b6"></div>
-            <div class="pad ride-pad b9"></div>
-            <div class="pad ride-pad b10"></div>
+            <div class="padControls">
+                <div class="pad ride-pad b1"></div>
+                <div class="pad ride-pad b2"></div>
+                <div class="pad ride-pad b3"></div>
+                <div class="pad ride-pad b4"></div>
+                <div class="pad ride-pad b5"></div>
+                <div class="pad ride-pad b6"></div>
+                <div class="pad ride-pad b7"></div>
+                <div class="pad ride-pad b8"></div>
+                <div class="pad ride-pad b9"></div>
+                <div class="pad ride-pad b10"></div>
+            </div>
         </article>
         <!-- shaker -->
         <article class="shaker-track">
             <div class="controls">
-                <h1>shaker</h1>
+                <h1>Shaker</h1>
                 <button data-track="0"><i class="fas fa-volume-mute"></i></button>
                 <select name="shaker-select" id="shaker-select">
                     <option value="./Sounds/shaker-analog.wav">shaker-analog</option>
@@ -265,14 +299,18 @@
                     <option value="./Sounds/shaker-suckup.wav">shaker-suckup</option>
                 </select>
             </div>
-            <div class="pad shaker-pad b1"></div>
-            <div class="pad shaker-pad b2"></div>
-            <div class="pad shaker-pad b3"></div>
-            <div class="pad shaker-pad b4"></div>
-            <div class="pad shaker-pad b5"></div>
-            <div class="pad shaker-pad b6"></div>
-            <div class="pad shaker-pad b9"></div>
-            <div class="pad shaker-pad b10"></div>
+            <div class="padControls">
+                <div class="pad shaker-pad b1"></div>
+                <div class="pad shaker-pad b2"></div>
+                <div class="pad shaker-pad b3"></div>
+                <div class="pad shaker-pad b4"></div>
+                <div class="pad shaker-pad b5"></div>
+                <div class="pad shaker-pad b6"></div>
+                <div class="pad shaker-pad b7"></div>
+                <div class="pad shaker-pad b8"></div>
+                <div class="pad shaker-pad b9"></div>
+                <div class="pad shaker-pad b10"></div>
+            </div>
         </article>
 
         <!-- play button -->
@@ -284,7 +322,7 @@
         <!--range input -->
         <div class="speed-range">
             <input min="20" max="300" type="range" class="speed-range__input">
-            <p class="spped-tange__amount">Tempo : <span id="beatSpeed"></span></p>
+            <p class="speed-range__amount">Repeat per minute : <span id="beatSpeed"></span></p>
         </div>
         <!--  -->
     </div>
