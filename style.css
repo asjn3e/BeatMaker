@@ -85,6 +85,16 @@ body{
     background-color: #fff;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    height: 80vh;
+}
+article{
+    transition: all .5s ease-out;
+}
+article.proRequierd{
+    transform: scale(0);
+    height: 0;
+    opacity: 0;
 }
 .sequencer .controls{
     display: grid;
@@ -202,8 +212,14 @@ body{
 }
 
 
+/*  */
 
-
+    
+.Pro .proRequierd{
+   transform: scale(1);
+   height: auto;
+   opacity: 1;
+}
 
 
 
@@ -211,7 +227,7 @@ body{
     .difficultyBox{
         background:#1b3a48 ;
         clip-path: polygon(0 0, 100% 0, 80% 60%, 20% 60%);
-
+        
         align-items: flex-start;
         padding: 3rem 1rem;
         width: 50rem;
@@ -314,4 +330,5 @@ body{
         width: 20%;
         margin-bottom: 2rem;
     }
+
 }
