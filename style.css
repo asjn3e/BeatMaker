@@ -180,6 +180,7 @@ article.proRequierd{
 
 
 
+
 .start-div{
     display: flex;
     justify-content: center;
@@ -212,14 +213,43 @@ article.proRequierd{
 }
 
 
-/*  */
-
+/* difficulty switcher */
+.kick-pad.active{
+    background-color: #65a5a1;
+}
+.snare-pad.active{
+    background-color: #0fa0da;
+}
+.hihat-pad.active{
+    background-color: #f87c00;
+}
+.openhat-pad.active{
+    background-color:#9b9b26;
+}
+.crash-pad.active{
+    background-color: #00bbbb;
+}
+.tom-pad.active{
+    background-color:#e2035c ;
+}
+.perc-pad.active{
+    background-color: #ffff00;
+}
+.ride-pad.active{
+    background-color: #5c5cd0;
+}
+.shaker-pad.active{
+    background-color:#20c557 ;
+}
     
 .Pro .proRequierd{
    transform: scale(1);
    height: auto;
    opacity: 1;
 }
+
+/* activating pads */
+
 
 
 
