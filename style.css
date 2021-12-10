@@ -149,6 +149,7 @@ article.proRequierd{
     height: 1.8rem;
     background-color: #000;
     margin: 0 .4rem;
+    transition: transform .3s ease;
 }
 .kick-pad{
     background-color: #CCE8E6;
