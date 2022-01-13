@@ -8,12 +8,12 @@ class DrumKit {
     this.articles = document.querySelectorAll(".proRequierd");
     this.difficulty = "lite";
     this.Interval = null;
-    this.bpm = 150;
+    this.bpm = 250;
     this.index = 1;
     this.pads = document.querySelectorAll(".pad");
     this.startandstopBTN = document.querySelector("#start-stop--btn");
     this.speedRange = document.querySelector("#speed-range");
-
+    this.muteButtons=document.querySelectorAll(".mute--button");
     this.difficultySwitcher = (value) => {
       this.difficulty = value;
       this.sequencer.classList.toggle("Pro");
@@ -51,31 +51,50 @@ class DrumKit {
         if (element.classList.contains("active")) {
           switch (element.classList[1]) {
             case "kick-pad":
-              sound.src = kick;
+              if(!this.muteButtons[0].classList.contains("active")){
+                sound.src = kick;
+              }
               break;
             case "snare-pad":
-              sound.src = snare;
+                if(!this.muteButtons[1].classList.contains("active")){
+                    sound.src = snare;
+                  } 
+                  
               break;
             case "hihat-pad":
-              sound.src = hihat;
+                if(!this.muteButtons[2].classList.contains("active")){
+                    sound.src = hihat;
+                  }
               break;
             case "openhat-pad":
-              sound.src = openhat;
+                if(!this.muteButtons[3].classList.contains("active")){
+                    sound.src = openhat;
+                  }
               break;
             case "crash-pad":
-              sound.src = crash;
+                if(!this.muteButtons[4].classList.contains("active")){
+                    sound.src = crash;
+                  }
               break;
             case "tom-pad":
-              sound.src = tom;
+                if(!this.muteButtons[5].classList.contains("active")){
+                    sound.src = tom;
+                  }
               break;
             case "perc-pad":
-              sound.src = perc;
+                if(!this.muteButtons[6].classList.contains("active")){
+                    sound.src = perc;
+                  }
               break;
             case "ride-pad":
-              sound.src = ride;
+                if(!this.muteButtons[7].classList.contains("active")){
+                    sound.src = ride;
+                  }
               break;
             case "shaker-pad":
-              sound.src = shaker;
+                if(!this.muteButtons[8].classList.contains("active")){
+                    sound.src = shaker;
+                  }
               break;
           }
           sound.play();
@@ -127,10 +146,9 @@ drumkit.speedRange.addEventListener("input", (e) => {
   document.querySelector("#beatSpeed").innerText = speedRange;
   drumkit.stop();
 });
-// drumkit.articles.forEach(element =>{
-//     element.addEventListener("transitionend",()=>{
-//         element.classList.toggle("disChanger")
-//     })
-// })
 
-// drumkit.difficultySwitcher();
+drumkit.muteButtons.forEach((element)=>{
+    element.addEventListener("click",()=>{
+        element.classList.toggle("active")
+    })
+})

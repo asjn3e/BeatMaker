@@ -136,9 +136,14 @@ article.proRequierd{
     background-color: none;
     border: none;
     border-radius: 5px;
-    width: 50%;
+    width: 40%;
     height: 100%;
 }
+.controls button.active{
+    background: rgb(148, 143, 143);
+}
+
+
 .sequencer .padControls{
     display: flex;
     justify-content: center;
