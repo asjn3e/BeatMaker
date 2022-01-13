@@ -1,6 +1,5 @@
 function CreateSoundObject(soundName){
-    this.soundSelect=document.querySelector(`#${soundName}-select`);
-    this.currentSound=document.querySelector(`#${soundName}-select`).value;
+    return document.querySelector(`#${soundName}-select`).value;
 }
 class DrumKit{
     constructor(){
@@ -9,18 +8,8 @@ class DrumKit{
         this.articles=document.querySelectorAll(".proRequierd");
         this.difficulty="lite";
         this.Interval=null;
-        this.bpm=300;
+        this.bpm=200;
         this.index=1;
-        // sound objects
-        this.kick=new CreateSoundObject("kick");
-        this.snare=new CreateSoundObject("snare");
-        this.hihat=new CreateSoundObject("hihat");
-        this.openhat=new CreateSoundObject("openhat");
-        this.crash=new CreateSoundObject("crash");
-        this.tom=new CreateSoundObject("tom");
-        this.perc=new CreateSoundObject("perc");
-        this.ride=new CreateSoundObject("ride");
-        this.shaker=new CreateSoundObject("shaker");
         this.pads=document.querySelectorAll(".pad");
 
         this.difficultySwitcher = (value)=>{
@@ -29,20 +18,31 @@ class DrumKit{
             
         }
         this.repeat=(x)=>{
-            x %= 10;
+            x %= 9;
             if (x == 0){
-                x=10
+                x=9
             }
             console.log(x);
             //reseting previous index
             let previousIndex=x-1;
             if(x-1==0){
-                previousIndex=10;
+                previousIndex=9;
             }
             const previousPads=document.querySelectorAll(`.b${previousIndex}`)
             previousPads.forEach(element =>{
                 element.style.transform="scale(1)"
             })
+
+            const kick= CreateSoundObject("kick");
+            const snare= CreateSoundObject("snare");
+            const hihat= CreateSoundObject("hihat");
+            const openhat= CreateSoundObject("openhat");
+            const crash= CreateSoundObject("crash");
+            const tom= CreateSoundObject("tom");
+            const perc= CreateSoundObject("perc");
+            const ride= CreateSoundObject("ride");
+            const shaker= CreateSoundObject("shaker");
+
 
             const currentPads=document.querySelectorAll(`.b${x}`);
             currentPads.forEach(element =>{
@@ -51,31 +51,31 @@ class DrumKit{
                 if(element.classList.contains("active")){
                     switch (element.classList[1]) {
                         case "kick-pad":
-                            sound.src=this.kick.currentSound;
+                            sound.src=kick;
                             break;
                         case "snare-pad":
-                            sound.src=this.snare.currentSound;
+                            sound.src=snare;
                             break;
                         case "hihat-pad":
-                            sound.src=this.hihat.currentSound;
+                            sound.src=hihat;
                             break;
                         case "openhat-pad":
-                            sound.src=this.openhat.currentSound;
+                            sound.src=openhat;
                             break;
                         case "crash-pad":
-                            sound.src=this.crash.currentSound;
+                            sound.src=crash;
                             break;
                         case "tom-pad":
-                            sound.src=this.tom.currentSound;
+                            sound.src=tom;
                             break;
                         case "perc-pad":
-                            sound.src=this.perc.currentSound;
+                            sound.src=perc;
                             break;
                         case "ride-pad":
-                            sound.src=this.ride.currentSound;
+                            sound.src=ride;
                             break;
                         case "shaker-pad":
-                            sound.src=this.shaker.currentSound;
+                            sound.src=shaker;
                             break;
                     }
                     sound.play();
@@ -108,6 +108,8 @@ drumkit.pads.forEach(element=>{
     })
 })
 
+console.log(drumkit.hihat)  
+
 // drumkit.articles.forEach(element =>{
 //     element.addEventListener("transitionend",()=>{
 //         element.classList.toggle("disChanger")
@@ -115,3 +117,4 @@ drumkit.pads.forEach(element=>{
 // })
 
 // drumkit.difficultySwitcher();
+
